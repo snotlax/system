@@ -85,8 +85,8 @@
 
         /* Image Placeholder: Hero Background */
         .hero-bg-placeholder {
-            /* REPLACE 'url' below with actual background image */
-            /* background-image: url('path-to-your-hud-bg.jpg'); */
+            /* IMPORTANT: Ensure you have a 'hero-bg.jpg' in your assets folder */
+            background-image: url('assets/hero-bg.jpg'); 
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1;
@@ -142,28 +142,18 @@
             padding-left: 10px;
         }
 
+        /* UPDATED PHOTO SECTION FOR SINGLE IMAGE */
         .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
             margin-top: 20px;
+            text-align: center;
         }
         
-        /* Image Placeholders */
-        .grid-img {
-            aspect-ratio: 1 / 1;
-            background-color: #1e293b;
-            border: 1px dashed var(--accent-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            color: #64748b;
-            text-align: center;
-            overflow: hidden;
-        }
-        .grid-img img {
-            width: 100%; height: 100%; object-fit: cover;
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--accent-color);
+            box-shadow: var(--glow);
+            border-radius: 4px;
         }
 
         /* --- THE MISSION --- */
@@ -281,20 +271,12 @@
             
             <ul class="architect-stats">
                 <li>Physical Evolution: 145lbs &rarr; 180lbs (Lean)</li>
-                <li>XP: 4 Years Heavy Iron / 2 Years BJJ Grappling</li>
+                <li>XP: 4 Years Heavy Iron / Cardio Protocols</li>
                 <li>Trait: Master of Daily Discipline</li>
             </ul>
 
             <div class="photo-grid">
-                <div class="grid-img">
-                    [IMG_01]
-                </div>
-                <div class="grid-img">
-                    [IMG_02]
-                </div>
-                <div class="grid-img">
-                    [IMG_03]
-                </div>
+                <img src="assets/Categories.png" alt="Strength, Cardio, and Physique Protocols">
             </div>
         </section>
 
